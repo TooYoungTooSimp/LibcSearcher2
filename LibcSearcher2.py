@@ -18,7 +18,7 @@ class LibcSearcher2:
 
     def search(self, cond):
         result = list(filter(len, [self.lookup[c] for c in cond]))
-        return list(reduce(lambda x, y: x.intersection(y), result)) if result is not None else None
+        return list(reduce(lambda x, y: x.intersection(y), result)) if result is not None and len(result) else None
 
     def dump(self, libc_id, func):
         return self.db[libc_id][func]
