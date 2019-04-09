@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -5,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="LibcSearcher2",
-    version="0.0.3",
+    version=datetime.now().strftime("%y.%m.%d+%H%M%S"),
     author="TooYoungTooSimp",
     author_email="6648049+TooYoungTooSimp@users.noreply.github.com",
     description="LibcSearcher2: Maybe a faster LibcSearcher",
