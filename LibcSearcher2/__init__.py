@@ -22,7 +22,7 @@ class LibcSearcher2:
         return list(reduce(lambda x, y: x.intersection(y), result)) if result is not None and len(result) else None
 
     def search_simple(self, symbol, address):
-        return self.search([(symbol, address & 4095)])
+        return self.search([(symbol, address & 0xfff)])
 
     def dump(self, libc_id, func):
         return self.__db[libc_id][func]
