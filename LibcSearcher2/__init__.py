@@ -26,3 +26,7 @@ class LibcSearcher2:
 
     def dump(self, libc_id, func):
         return self.__db[libc_id][func]
+
+    def dumps(self, libc_id, func, addr):
+        offset = addr - self.__db[libc_id][func]
+        return lambda f: offset + self.__db[libc_id][f]
