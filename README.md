@@ -13,8 +13,6 @@ Maybe a faster LibcSearcher
 pip install LibcSearcher2
 ```
 
-
-
 ## Usage
 
 ```python
