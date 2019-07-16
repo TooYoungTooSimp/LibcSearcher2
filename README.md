@@ -5,9 +5,7 @@ Maybe a faster LibcSearcher
 
 - Python 2 or 3
 
-- [libc-database]: https://github.com/niklasb/libc-database	"You need build your own libc-database."
-
-  
+- [libc-database](https://github.com/niklasb/libc-database) You need build your own libc-database.
 
 ## Install
 
@@ -33,6 +31,6 @@ searcher.dump(libc_id, symbol)
 # Create a functor to dump real address of symbols.
 ret = searcher.dumps(libc_id, symbol, address)
 # Then you can use it to dump real addresses
-ret("read"), ret("write"), ret("str_bin_sh")
+ret("system"), ret("str_bin_sh")
 ```
 
